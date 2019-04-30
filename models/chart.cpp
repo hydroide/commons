@@ -57,12 +57,12 @@ void Chart::setChartSize(const ChartSize &chartSize)
     _chartSize = chartSize;
 }
 
-QGraphicsObject *Chart::rootItem() const
+QObject *Chart::rootItem() const
 {
     return _rootItem;
 }
 
-void Chart::setRootItem(QGraphicsObject *value)
+void Chart::setRootItem(QObject *value)
 {
     _rootItem = value;
 }

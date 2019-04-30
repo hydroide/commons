@@ -38,8 +38,8 @@ public:
     ChartSize chartSize() const;
     void setChartSize(const ChartSize &chartSize);
 
-    QGraphicsObject *rootItem() const;
-    void setRootItem(QGraphicsObject *value);
+    QObject *rootItem() const;
+    void setRootItem(QObject *value);
 
 private:
     QString _chartName;
@@ -47,7 +47,7 @@ private:
     QList<SpElement> _lspElements;
     QList<SpProcessSeries> _seriesList;
 
-    QGraphicsObject *_rootItem {nullptr};
+    QObject *_rootItem {nullptr};
 
     ChartSize _chartSize;
 
