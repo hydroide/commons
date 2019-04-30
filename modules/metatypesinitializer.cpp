@@ -9,7 +9,7 @@
 
 #include "datetimetovaluemap.h"
 
-#include <QTextOption>
+//#include <QTextOption>
 
 MetaTypesInitializer::MetaTypesInitializer()
 {
