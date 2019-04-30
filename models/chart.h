@@ -6,7 +6,7 @@
 
 #include <QtCore>
 #include <QtGui>
-#include <QtWidgets>
+//#include <QtWidgets>
 
 #include <boost/shared_ptr.hpp>
 
