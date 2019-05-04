@@ -7,8 +7,6 @@
 #include <QtCore>
 #include <QtGui>
 
-#include <boost/shared_ptr.hpp>
-
 #include "globaldefines.h"
 #include "modules/curvestructs.h"
 
@@ -113,6 +111,6 @@ Q_DECLARE_METATYPE(ProcessSeries)
 void operator <<(QVariant &data, const ProcessSeries &context);
 void operator >>(const QVariant &data, ProcessSeries &context);
 
-typedef boost::shared_ptr<ProcessSeries> SpProcessSeries;
+typedef std::shared_ptr<ProcessSeries> SpProcessSeries;
 
 #endif
