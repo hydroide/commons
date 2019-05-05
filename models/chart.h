@@ -8,8 +8,6 @@
 #include <QtGui>
 //#include <QtWidgets>
 
-#include <boost/shared_ptr.hpp>
-
 #include "models/curve.h"
 #include "models/chartsize.h"
 
@@ -54,6 +52,6 @@ private:
     //QList<ChartItem> chartItems;
 };
 
-typedef boost::shared_ptr<Chart> SpChart;
+typedef std::shared_ptr<Chart> SpChart;
 
 #endif // CHART_H
