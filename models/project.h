@@ -8,6 +8,8 @@
 
 #include "chart.h"
 
+#include "dataproviderinterface.h"
+
 #include <QStandardItem>
 
 class Project
@@ -47,7 +49,11 @@ public:
     QStandardItem *getPProcessItem() const;
     void setPProcessItem(QStandardItem *pProcessItem);
 
+    DataProviderInterface *dataProvider() const;
+    void setDataProvider(DataProviderInterface *dataProvider);
+
 private:
+    DataProviderInterface *_dataProvider{nullptr};
     bool changed{false};
 
     bool saved{true};
@@ -70,5 +76,7 @@ private:
     QStandardItem *_pCrossSectionItem{nullptr};
 
 };
+
+typedef std::shared_ptr<Project> SpProject;
 
 #endif // PROJECT_H

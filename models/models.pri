@@ -41,7 +41,8 @@ HEADERS += \
     $$PWD/table.h \
     $$PWD/text.h \
     $$PWD/treeitem.h \
-    $$PWD/treemodel.h
+    $$PWD/treemodel.h \
+    $$PWD/dataproviderinterface.h
 
 SOURCES += \
     $$PWD/canvassize.cpp \
