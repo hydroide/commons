@@ -37,6 +37,8 @@ unix {
     INSTALLS += target
 }
 
+INCLUDEPATH += ../interfaces
+
 BOOST_PATH = ../dependencies/boost
 
 INCLUDEPATH += $$BOOST_PATH
