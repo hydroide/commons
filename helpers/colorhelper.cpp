@@ -5,11 +5,6 @@
 
 #include <QList>
 
-ColorHelper::ColorHelper()
-{
-
-}
-
 QColor ColorHelper::random()
 {
     QList<int> list;

@@ -6,10 +6,17 @@
 
 #include <QColor>
 
+/**
+ * @brief The ColorHelper class 颜色辅助类
+ */
 class ColorHelper
 {
 public:
-    ColorHelper();
+    ColorHelper() = delete;
+    /**
+     * @brief random 生成随机色
+     * @return 随机色
+     */
     static QColor random();
 };
 

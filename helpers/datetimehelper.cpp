@@ -118,7 +118,7 @@ bool DateTimeHelper::sameYear(const QDateTime &dt1, const QDateTime &dt2)
             t2 == QTime(0, 0);
 }
 
-bool DateTimeHelper::sameMonth(const QDateTime &dt1, const QDateTime &dt2)
+bool DateTimeHelper::sameYearMonth(const QDateTime &dt1, const QDateTime &dt2)
 {
     auto d1 = dt1.date();
     auto d2 = dt2.date();

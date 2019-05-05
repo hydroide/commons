@@ -8,6 +8,9 @@
 
 #include "../models/point.h"
 
+/**
+ * @brief The MathHelper class 数学辅助类
+ */
 class MathHelper
 {
 public:
@@ -15,9 +18,9 @@ public:
 
     /**
      * @brief Lagrange Polynomial Interpolation n阶拉格朗日抛物线插值 （拉格朗日插值多项式）
-     * @param points
-     * @param x
-     * @return y
+     * @param points 所有已知结点（使用Point<T>点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
      */
     template<typename T>
     static T LPI(const QVector<Point<T>> &points, T x)
@@ -42,6 +45,12 @@ public:
         return ret;
     }
 
+    /**
+     * @brief Lagrange Polynomial Interpolation n阶拉格朗日抛物线插值 （拉格朗日插值多项式）
+     * @param points
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
+     */
     template<typename T>
     static T LPI(const QVector<QPointF> &points, T x)
     {
@@ -67,9 +76,9 @@ public:
 
     /**
      * @brief LPI2, Lagrange Polynomial Interpolation 2 2次拉格朗日插值（抛物线插值）
-     * @param points
-     * @param x
-     * @return y
+     * @param points 所有已知结点（使用Point<T>点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
      */
     template<typename T>
     static T LPI2(const QVector<Point<T>> &points, T x)
@@ -99,9 +108,9 @@ public:
     /**
      * @brief PLPI_MPS, Piecewise Lagrange Parabolic Interpolation, mid-point separated
      *  分段拉格朗日抛物线插值 中点分隔
-     * @param points
-     * @param x
-     * @return y
+     * @param points 所有已知结点（使用Point<T>点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
      */
     template<typename T>
     static T PLPI_MPS(const QVector<Point<T>> &points, T x)
@@ -153,6 +162,13 @@ public:
         return ret;
     }
 
+    /**
+     * @brief PLPI_MPS, Piecewise Lagrange Parabolic Interpolation, mid-point separated
+     *  分段拉格朗日抛物线插值 中点分隔
+     * @param points 所有已知结点（使用QPointF点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
+     */
     template<typename T>
     static T PLPI_MPS(const QVector<QPointF> &points, T x)
     {
@@ -206,9 +222,9 @@ public:
     /**
      * @brief PLPI_TPA, Piecewise Lagrange Parabolic Interpolation, two pieces averaged
      *  分段拉格朗日抛物线插值 结点分隔——中间平均值
-     * @param points
-     * @param x
-     * @return y
+     * @param points 所有已知结点（使用Point<T>点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
      */
     template<typename T>
     static T PLPI_TPA(const QVector<Point<T>> &points, T x)
@@ -276,6 +292,13 @@ public:
         return ret;
     }
 
+    /**
+     * @brief PLPI_TPA, Piecewise Lagrange Parabolic Interpolation, two pieces averaged
+     *  分段拉格朗日抛物线插值 结点分隔——中间平均值
+     * @param points 所有已知结点（使用QPointF点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
+     */
     template<typename T>
     static T PLPI_TPA(const QVector<QPointF> &points, T x)
     {
@@ -345,9 +368,9 @@ public:
     /**
      * @brief PLPI_TPA, Piecewise Lagrange Parabolic Interpolation, Linear Weighted Sum
      *  分段拉格朗日抛物线插值 线性加权合成
-     * @param points
-     * @param x
-     * @return y
+     * @param points 所有已知结点（使用Point<T>点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
      */
     template<typename T>
     static T PLPI_LWS(const QVector<Point<T>> &points, T x)
@@ -429,6 +452,13 @@ public:
         return ret;
     }
 
+    /**
+     * @brief PLPI_TPA, Piecewise Lagrange Parabolic Interpolation, Linear Weighted Sum
+     *  分段拉格朗日抛物线插值 线性加权合成
+     * @param points 所有已知结点（使用QPointF点类型的QVector）
+     * @param x 线上点的一个坐标值
+     * @return y 线上点的另一坐标值
+     */
     template<typename T>
     static T PLPI_LWS(const QVector<QPointF> &points, T x)
     {
@@ -509,22 +539,18 @@ public:
         return ret;
     }
 
+
     /**
-     * @brief Quadratic Bézier Curve Control Point 得到二阶贝塞尔曲线控制点
-     * @param points
-     * @param x
-     * @return y
+     * @brief QBCCP Quadratic Bézier Curve Control Point 得到二阶贝塞尔曲线控制点
+     * @param p1 第一个已知点
+     * @param p2 第二个已知点
+     * @param p3 第三个已知点
+     * @param t  调节系数
+     * @return   控制点
      */
     template<typename T>
     static T QBCCP(const T &p1, const T &p2, const T &p3, double t = 0.5)
     {
-//        QVector<QPointF> v;
-//        v.push_back(p1);
-//        v.push_back(p2);
-//        v.push_back(p3);
-
-//        auto t = 0.5;
-
         auto x1 = p1.x();
         auto x2 = p2.x();
         auto x3 = p3.x();
@@ -532,11 +558,6 @@ public:
         auto y2 = p2.y();
         auto y3 = p3.y();
 
-//        auto pid1 = LPI2(v, x1);
-//        auto pid3 = LPI2(v, x3);
-
-//        auto x = (y3 - y1 + x1*pid1 - x3*pid3)/(pid1 - pid3);
-//        auto y = (x3 - x1 + (y1/pid1) - (y3/pid3))/((1/pid1) - (1/pid3));
         auto denominator = 2 * t * (1 - t);
         auto one_minus_t = 1 - t;
         auto numerator_x = x2 - one_minus_t * one_minus_t * x1 - t * t * x3;

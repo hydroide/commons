@@ -12,7 +12,7 @@ using namespace boost::multiprecision;
 
 #include <QtCore>
 /**
- * @brief The RoundingHelper class 舍入处理
+ * @brief The RoundingHelper class 舍入处理辅助类
  */
 class RoundingHelper
 {
@@ -116,16 +116,61 @@ public:
         return round_scale(v, scale);
     }
 
+    /**
+     * @brief roundStage 舍入水位
+     * @param value 需要处理的水位(cpp_dec_float_50)
+     * @return 舍入完成的水位字符串
+     */
     static string roundStage(cpp_dec_float_50 value);
+    /**
+     * @brief roundStage 舍入水位
+     * @param value 需要处理的水位字符串(QString)
+     * @return 舍入完成的水位字符串
+     */
     static string roundStage(string value);
+    /**
+     * @brief roundStage 舍入水位
+     * @param value 需要处理的水位(double)
+     * @return 舍入完成的水位字符串(QString)
+     */
     static QString roundStage(qreal value);
 
+    /**
+     * @brief roundStage 舍入流量
+     * @param value 需要处理的流量(cpp_dec_float_50)
+     * @return 舍入完成的流量字符串
+     */
     static string roundDischarge(cpp_dec_float_50 value);
+    /**
+     * @brief roundStage 舍入流量
+     * @param value 需要处理的流量(string)
+     * @return 舍入完成的流量字符串
+     */
     static string roundDischarge(string value);
+    /**
+     * @brief roundStage 舍入流量
+     * @param value 需要处理的流量(double)
+     * @return 舍入完成的流量字符串(QString)
+     */
     static QString roundDischarge(qreal value);
 
+    /**
+     * @brief roundStage 舍入含沙量
+     * @param value 需要处理的含沙量(cpp_dec_float_50)
+     * @return 舍入完成的含沙量字符串
+     */
     static string roundSediment(cpp_dec_float_50 value);
+    /**
+     * @brief roundStage 舍入含沙量
+     * @param value 需要处理的含沙量(string)
+     * @return 舍入完成的含沙量字符串
+     */
     static string roundSediment(string value);
+    /**
+     * @brief roundStage 舍入含沙量
+     * @param value 需要处理的含沙量(double)
+     * @return 舍入完成的含沙量字符串(QString)
+     */
     static QString roundSediment(qreal value);
 
 };

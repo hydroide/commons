@@ -6,6 +6,5 @@ HEADERS += \
 
 SOURCES += \
     $$PWD/datetimehelper.cpp \
-    $$PWD/mathhelper.cpp \
     $$PWD/roundinghelper.cpp \
     $$PWD/colorhelper.cpp
