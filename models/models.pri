@@ -21,13 +21,11 @@ HEADERS += \
     $$PWD/presets.h \
     $$PWD/processcurve.h \
     $$PWD/processingdata.h \
-    $$PWD/processpoints.h \
     $$PWD/processseries.h \
     $$PWD/project.h \
     $$PWD/reckeneddischarge.h \
     $$PWD/reckenedmeansediment.h \
     $$PWD/record.h \
-    $$PWD/relationseries.h \
     $$PWD/sdmeasurementrecord.h \
     $$PWD/sdrcnoderecord.h \
     $$PWD/sdrcurve.h \
@@ -64,13 +62,11 @@ SOURCES += \
     $$PWD/presets.cpp \
     $$PWD/processcurve.cpp \
     $$PWD/processingdata.cpp \
-    $$PWD/processpoints.cpp \
     $$PWD/processseries.cpp \
     $$PWD/project.cpp \
     $$PWD/reckeneddischarge.cpp \
     $$PWD/reckenedmeansediment.cpp \
     $$PWD/record.cpp \
-    $$PWD/relationseries.cpp \
     $$PWD/sdrcnoderecord.cpp \
     $$PWD/sdrcurve.cpp \
     $$PWD/sdrcurvenode.cpp \
