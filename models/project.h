@@ -8,7 +8,7 @@
 
 #include "chart.h"
 
-#include "dataproviderinterface.h"
+#include "../interfaces/dataproviderinterface.h"
 
 #include <QStandardItem>
 
