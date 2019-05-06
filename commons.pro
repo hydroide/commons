@@ -31,7 +31,8 @@ SOURCES += \
         commons.cpp
 
 HEADERS += \
-        commons.h
+        commons.h \
+    hcglobaldefs.h
 
 unix {
     target.path = /usr/lib
