@@ -36,7 +36,6 @@ Project::Project(const QString &projPath)
 Project::~Project()
 {
     delete _pProjectItem;
-    delete _dataProvider;
 }
 
 void Project::open()
@@ -145,16 +144,13 @@ void Project::setPProcessItem(QStandardItem *pProcessItem)
     _pProcessItem = pProcessItem;
 }
 
-DataProviderInterface *Project::dataProvider() const
+std::shared_ptr<DataProviderInterface> Project::dataProvider() const
 {
     return _dataProvider;
 }
 
-void Project::setDataProvider(DataProviderInterface *dataProvider)
+void Project::setDataProvider(const std::shared_ptr<DataProviderInterface> &dataProvider)
 {
-    if (_dataProvider) {
-        delete _dataProvider;
-    }
     _dataProvider = dataProvider;
 }
 

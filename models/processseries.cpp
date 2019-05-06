@@ -241,66 +241,37 @@ ProcessSeries::~ProcessSeries()
 
 void ProcessSeries::genStageMap()
 {
-    // TODO : migrate to db accessors
-//    _mStages.setData(DatabaseManager::instance()->
-//            getStage(_stcd, _startDateTime, _endDateTime));
+    if (_dataProvider) {
+        _mStages.setData(_dataProvider->z_series(_stcd, _startDateTime, _endDateTime));
+    }
 }
 
 void ProcessSeries::genDischargeMap()
 {
-    if (_mStages.data().isEmpty())
-    {
-        genStageMap();
+    if (_dataProvider) {
+        _mDischarges.setData(_dataProvider->rq_series(_stcd, _startDateTime, _endDateTime));
     }
-    // TODO : migrate to db accessors
-//    _mDischarges.setData(DatabaseManager::instance()->
-//            getReckonedDischarge(_stcd, _mStages.data()));
-
 }
 
 void ProcessSeries::genSedimentMap()
 {
-    // TODO : migrate to db accessors
-//    _mSediments.setData(DatabaseManager::instance()->
-//            getIndexSediment(_stcd,
-//                             _startDateTime,
-//                             _endDateTime));
-
+    if (_dataProvider) {
+        _mSediments.setData(_dataProvider->s_series(_stcd, _startDateTime, _endDateTime));
+    }
 }
 
 void ProcessSeries::genMeasuredDischargeMap()
 {
-    // TODO : migrate to db accessors
-//    _measuredDischargeMap = DatabaseManager::instance()->
-//            getMeasuredDischarge(_stcd,
-//                                 _startDateTime,
-//                                 _endDateTime);
+    if (_dataProvider) {
+        _measuredDischargeMap = _dataProvider->mq_series(_stcd, _startDateTime, _endDateTime);
+    }
 }
 
 void ProcessSeries::genMeasuredSedimentDischargeMap()
 {
-    // TODO : migrate to db accessors
-//    _measuredSedimentDischargeMap = DatabaseManager::instance()->
-//            getMeasuredCrossSectionalSedimentConcentration(_stcd,
-//                                                           _startDateTime,
-//                                                           _endDateTime);
-}
-
-void ProcessSeries::updateMaps()
-{
-//    if (!_mStages.data().isEmpty()) // problem
-    {
-        genStageMap();
+    if (_dataProvider) {
+        _measuredSedimentDischargeMap = _dataProvider->msq_series(_stcd, _startDateTime, _endDateTime);
     }
-//    if (!_mDischarges.data().isEmpty()) // problem
-    {
-        genDischargeMap();
-    }
-//    if (!_mSediments.data().isEmpty()) // problem
-    {
-        genSedimentMap();
-    }
-//    genMeasuredDischargeMap();
 }
 
 ProcessMap &ProcessSeries::mStages()
@@ -338,21 +309,10 @@ void ProcessSeries::setLineColor(const QColor &lineColor)
     _lineColor = lineColor;
 }
 
-//void ProcessSeries::generateMap()
-//{
-//    if (this->drawType() == "stage")
-//    {
-//        _mValues = getStageMap();
-//    }
-//    else if (this->drawType() == "discharge")
-//    {
-//        _mValues = getDischargeMap();
-//    }
-//    else if (this->drawType() == "sediment")
-//    {
-//        _mValues = getSedimentMap();
-//    }
-//}
+void ProcessSeries::setDataProvider(const std::shared_ptr<DataProviderInterface> &dataProvider)
+{
+    _dataProvider = dataProvider;
+}
 
 QDateTime ProcessSeries::startDateTime() const
 {
