@@ -5,7 +5,6 @@
 #define STATION_H
 
 #include <QtCore>
-#include "../globaldefines.h"
 
 class Station
 {

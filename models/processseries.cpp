@@ -3,8 +3,10 @@
 #endif
 #include "processseries.h"
 
-#include "helpers/roundinghelper.h"
-#include "modules/qvariantserializationdefs.h"
+#include "../helpers/roundinghelper.h"
+#include "../modules/qvariantserializationdefs.h"
+
+#include "../hcglobaldefs.h"
 
 /*****************************************************************
  * Global

@@ -4,7 +4,7 @@
 #ifndef SQUARECANVASSETTINGS_H
 #define SQUARECANVASSETTINGS_H
 
-#include "globaldefines.h"
+#include "hcglobaldefs.h"
 
 class SquareCanvasSettings
 {

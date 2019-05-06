@@ -3,6 +3,8 @@
 #endif
 #include "station.h"
 
+#include "../hcglobaldefs.h"
+
 Station::Station(const QString &stcd)
 {
     _stcd = stcd;

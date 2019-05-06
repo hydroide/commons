@@ -4,7 +4,7 @@
 #ifndef HOURCANVASSETTINGS_H
 #define HOURCANVASSETTINGS_H
 
-#include "globaldefines.h"
+#include "hcglobaldefs.h"
 
 class HourCanvasSettings
 {

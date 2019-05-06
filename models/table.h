@@ -5,7 +5,6 @@
 #define TABLE_H
 
 #include <QtCore>
-#include "../globaldefines.h"
 
 class Table
 {

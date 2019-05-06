@@ -2,7 +2,7 @@
 #pragma execution_character_set("utf-8")
 #endif
 #include "presets.h"
-#include "../globaldefines.h"
+#include "../hcglobaldefs.h"
 
 Presets::Presets(const QString &filePath)
 {

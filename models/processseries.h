@@ -7,7 +7,6 @@
 #include <QtCore>
 #include <QtGui>
 
-#include "globaldefines.h"
 #include "modules/curvestructs.h"
 #include "interfaces/dataproviderinterface.h"
 

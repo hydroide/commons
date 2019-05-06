@@ -3,9 +3,9 @@
 #endif
 #include "project.h"
 
-#include "models/treemodel.h"
+#include "hcglobaldefs.h"
 
-//#include "globals.h"
+#include "treemodel.h"
 
 Project::Project(const QString &projPath)
 {

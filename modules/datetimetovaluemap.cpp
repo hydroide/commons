@@ -4,7 +4,6 @@
 #include "datetimetovaluemap.h"
 
 #include <QtCore>
-#include "../globaldefines.h"
 #include "qvariantserializationdefs.h"
 
 DateTimeToValueMap::DateTimeToValueMap()

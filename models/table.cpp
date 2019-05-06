@@ -3,6 +3,8 @@
 #endif
 #include "table.h"
 
+#include "../hcglobaldefs.h"
+
 Table::Table(const QString &tableName)
 {
     _tableName = tableName;
