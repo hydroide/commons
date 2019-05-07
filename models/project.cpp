@@ -144,12 +144,12 @@ void Project::setPProcessItem(QStandardItem *pProcessItem)
     _pProcessItem = pProcessItem;
 }
 
-std::shared_ptr<DataProviderInterface> Project::dataProvider() const
+SpDataProviderInterface Project::dataProvider() const
 {
     return _dataProvider;
 }
 
-void Project::setDataProvider(const std::shared_ptr<DataProviderInterface> &dataProvider)
+void Project::setDataProvider(const SpDataProviderInterface &dataProvider)
 {
     _dataProvider = dataProvider;
 }

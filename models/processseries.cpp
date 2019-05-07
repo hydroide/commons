@@ -311,7 +311,7 @@ void ProcessSeries::setLineColor(const QColor &lineColor)
     _lineColor = lineColor;
 }
 
-void ProcessSeries::setDataProvider(const std::shared_ptr<DataProviderInterface> &dataProvider)
+void ProcessSeries::setDataProvider(const SpDataProviderInterface &dataProvider)
 {
     _dataProvider = dataProvider;
 }

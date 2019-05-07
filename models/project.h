@@ -49,11 +49,11 @@ public:
     QStandardItem *getPProcessItem() const;
     void setPProcessItem(QStandardItem *pProcessItem);
 
-    std::shared_ptr<DataProviderInterface> dataProvider() const;
-    void setDataProvider(const std::shared_ptr<DataProviderInterface> &dataProvider);
+    SpDataProviderInterface dataProvider() const;
+    void setDataProvider(const SpDataProviderInterface &dataProvider);
 
 private:
-    std::shared_ptr<DataProviderInterface> _dataProvider{nullptr};
+    SpDataProviderInterface _dataProvider{nullptr};
     bool changed{false};
 
     bool saved{true};

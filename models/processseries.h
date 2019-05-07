@@ -86,10 +86,10 @@ public:
     QColor lineColor() const;
     void setLineColor(const QColor &lineColor);
 
-    void setDataProvider(const std::shared_ptr<DataProviderInterface> &dataProvider);
+    void setDataProvider(const SpDataProviderInterface &dataProvider);
 
 protected:
-    std::shared_ptr<DataProviderInterface> _dataProvider{nullptr};
+    SpDataProviderInterface _dataProvider{nullptr};
 
     ProcessMap _mStages;
     ProcessMap _mDischarges;

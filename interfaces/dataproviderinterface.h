@@ -127,4 +127,6 @@ public:
 
 Q_DECLARE_INTERFACE(DataProviderInterface, DataProviderInterface_iid)
 
+typedef std::shared_ptr<DataProviderInterface> SpDataProviderInterface;
+
 #endif // DATAPROVIDERINTERFACE_H
