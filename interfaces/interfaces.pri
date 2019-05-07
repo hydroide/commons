@@ -5,4 +5,5 @@ HEADERS += \
     $$PWD/fileimportinterface.h \
     $$PWD/projectinterface.h \
     $$PWD/testinterface.h \
-    $$PWD/viewerinterface.h
+    $$PWD/viewerinterface.h \
+    $$PWD/dataaccessorinterface.h
