@@ -1,7 +1,6 @@
 #ifndef DATABASEINTERFACE_H
 #define DATABASEINTERFACE_H
 
-#ifdef QT_SQL
 #include <QtSql>
 
 class DatabaseInterface
@@ -15,5 +14,4 @@ public:
 
 Q_DECLARE_INTERFACE(DatabaseInterface, DatabaseInterface_iid)
 
-#endif
 #endif // DATABASEINTERFACE_H
