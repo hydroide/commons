@@ -251,7 +251,7 @@ void ProcessSeries::genStageMap()
 void ProcessSeries::genDischargeMap()
 {
     if (_dataProvider) {
-        _mDischarges.setData(_dataProvider->rq_series(_stcd, _startDateTime, _endDateTime));
+        _mDischarges.setData(_dataProvider->q_series(_stcd, _startDateTime, _endDateTime));
     }
 }
 

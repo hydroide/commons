@@ -32,7 +32,7 @@ public:
     virtual QStringList zq_process_stcd_list() { return QStringList(); }
 
     /**
-     * @brief 水位系列（原始）
+     * @brief 水位系列
      * @param stcd 站号
      * @param startDateTime 开始时间
      * @param endDateTime 结束时间
@@ -44,37 +44,25 @@ public:
             const QDateTime &endDateTime) { return QMap<QDateTime, QString>(); }
 
     /**
-     * @brief 流量系列（推流）
+     * @brief 流量系列
      * @param stcd 站号
      * @param startDateTime 开始时间
      * @param endDateTime 结束时间
      * @return
      */
-    virtual QMap<QDateTime, QString> rq_series(
+    virtual QMap<QDateTime, QString> q_series(
             const QString &stcd,
             const QDateTime &startDateTime,
             const QDateTime &endDateTime) { return QMap<QDateTime, QString>(); }
 
     /**
-     * @brief 含沙量系列（原始）
+     * @brief 含沙量系列
      * @param stcd 站号
      * @param startDateTime 开始时间
      * @param endDateTime 结束时间
      * @return
      */
     virtual QMap<QDateTime, QString> s_series(
-            const QString &stcd,
-            const QDateTime &startDateTime,
-            const QDateTime &endDateTime) { return QMap<QDateTime, QString>(); }
-
-    /**
-     * @brief 含沙量系列（推沙）
-     * @param stcd 站号
-     * @param startDateTime 开始时间
-     * @param endDateTime 结束时间
-     * @return
-     */
-    virtual QMap<QDateTime, QString> rs_series(
             const QString &stcd,
             const QDateTime &startDateTime,
             const QDateTime &endDateTime) { return QMap<QDateTime, QString>(); }
