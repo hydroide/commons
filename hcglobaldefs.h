@@ -72,6 +72,7 @@ const QColor HOUR_CANVAS_DEFAULT_COLOR  {0, 174, 239};
 const QColor SQUARE_CANVAS_DEFAULT_COLOR  {255, 97, 0};
 
 const QMap<QString, QString> MAP_TABLE_DISPLAY_NAMES {
+    {QLatin1String("STATION_INFO"),   QObject::tr("测站信息")},
     {QLatin1String("ZQ_PERIOD"),      QObject::tr("推流时段")},
     {QLatin1String("SQ_PERIOD"),      QObject::tr("推沙时段")},
     {QLatin1String("ZQ_CURVE_NODE"),  QObject::tr("推流节点")},
