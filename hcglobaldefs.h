@@ -19,10 +19,6 @@ const int ROLE_PROPERTY_GROUP{Qt::UserRole + 20 };
 
 const int ROLE_TABLE_NAME{Qt::UserRole + 100};
 
-const QString AUTHOR            {QObject::tr("Joe Yang")};
-const QString ORGANIZATION      {QObject::tr("Shandong Bureau of "
-                                             "Hydrology and Water Resources, "
-                                             "YRCC")};
 const QString PROJECT_FILE_EXT  {"hcproj"};
 const QString PROJECT_DB_EXT    {"db"};
 const QString CHART_FILE_EXT    {"hcchart"};
@@ -46,8 +42,6 @@ const int METHOD_BEZIER_C = 3;
 
 const QString BRACKETS_NOT_CONFIGURED   {QObject::tr("<未配置>")};
 const QString BRACKETS_ERROR            {QObject::tr("<错误>")};
-
-const QString WINDOW_TITLE  {QObject::tr("水文曲线绘图系统 - 黄委山东水文水资源局")};
 
 const QString TYPE_HOUR     {QObject::tr("逐时")};
 const QString TYPE_SQUARE   {QObject::tr("方格")};
