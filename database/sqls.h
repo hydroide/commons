@@ -1,0 +1,168 @@
+﻿#if _MSC_VER >= 1600
+#pragma execution_character_set("utf-8")
+#endif
+#ifndef SQLS_H
+#define SQLS_H
+
+#include <QString>
+QString DROPEstn = QString("DROP TABLE IF EXISTS STATION_INFO;");
+QString CRTNEstn = QString("CREATE TABLE IF NOT EXISTS STATION_INFO ("
+                              "stcd TEXT,"
+                              "stnm TEXT,"
+                              "sthd TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEzqr = QString("DROP TABLE IF EXISTS ZQ_PROCESS;");
+QString CRTNEzqr = QString("CREATE TABLE IF NOT EXISTS ZQ_PROCESS ("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "row_id INTERGER,"
+                           "month INTEGER,"
+                           "day INTERGER,"
+                           "time TEXT,"
+                              "stage TEXT,"
+                              "discharge TEXT,"
+                              "annotation TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEzqm = QString("DROP TABLE IF EXISTS ZQ_MEASUREMENT;");
+QString CRTNEzqm = QString("CREATE TABLE IF NOT EXISTS ZQ_MEASUREMENT("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "record_id INTERGER,"
+                              "mmsn TEXT,"
+                              "month INTERGER,"
+                              "day INTERGER,"
+                              "start_time TEXT,"
+                              "end_time TEXT,"
+                              "location TEXT,"
+                              "stage TEXT,"
+                              "discharge TEXT,"
+                              "area TEXT,"
+                              "avg_v TEXT,"
+                              "max_v TEXT,"
+                              "stream_w TEXT,"
+                              "avg_depth TEXT,"
+                              "max_depth TEXT,"
+                              "surface_slope TEXT,"
+                              "mannings_n TEXT,"
+                              "annotation TEXT,"
+                              "method TEXT,"
+                              "points TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEzqp = QString("DROP TABLE IF EXISTS ZQ_PERIOD;");
+QString CRTNEzqp = QString("CREATE TABLE IF NOT EXISTS ZQ_PERIOD ("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "period_id INTERGER,"
+                              "start_time TEXT,"
+                              "end_time TEXT,"
+                              "method_id INTERGER,"
+                              "curve_id INTERGER,"
+                              "annotation TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEzqcn = QString("DROP TABLE IF EXISTS ZQ_CURVE_NODE;");
+QString CRTNEzqcn = QString("CREATE TABLE IF NOT EXISTS ZQ_CURVE_NODE ("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "curve_id INTERGER,"
+                              "node_id INTERGER,"
+                              "stage TEXT,"
+                              "discharge TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEscp = QString("DROP TABLE IF EXISTS SQ_PERIOD;");
+QString CRTNEscp = QString("CREATE TABLE IF NOT EXISTS SQ_PERIOD ("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "period_id INTERGER,"
+                              "start_time TEXT,"
+                              "end_time TEXT,"
+                              "method_id INTERGER,"
+                              "curve_id INTERGER,"
+                              "annotation TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEsccn = QString("DROP TABLE IF EXISTS SQ_CURVE_NODE;");
+QString CRTNEsccn = QString("CREATE TABLE IF NOT EXISTS SQ_CURVE_NODE ("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "curve_id INTERGER,"
+                              "node_id INTERGER,"
+                              "sssc TEXT,"
+                              "csmsc TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEscr = QString("DROP TABLE IF EXISTS SQ_PROCESS;");
+QString CRTNEscr = QString("CREATE TABLE IF NOT EXISTS SQ_PROCESS ("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "row_id INTERGER,"
+                           "month INTERGER,"
+                           "day INTERGER,"
+                           "time TEXT,"
+                              "concentration TEXT,"
+                              "annotation TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEsqm = QString("DROP TABLE IF EXISTS SQ_MEASUREMENT;");
+QString CRTNEsqm = QString("CREATE TABLE IF NOT EXISTS SQ_MEASUREMENT("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "record_id INTERGER,"
+                              "mmsn TEXT,"
+                              "zqmmsn TEXT,"
+                              "month INTERGER,"
+                              "day INTERGER,"
+                              "start_time TEXT,"
+                              "end_time TEXT,"
+                              "discharge TEXT,"
+                              "cssqr TEXT,"
+                              "csmsc TEXT,"
+                              "sssc TEXT,"
+                              "sssm TEXT,"
+                              "annotation TEXT,"
+                              "equipmentType TEXT,"
+                              "points TEXT,"
+                              "method TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEcss = QString("DROP TABLE IF EXISTS CS_SURVEY;");
+QString CRTNEcss = QString("CREATE TABLE IF NOT EXISTS CS_SURVEY ("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "survey_id INTERGER,"
+                              "month INTERGER,"
+                              "day INTERGER,"
+                              "location TEXT,"
+                              "stage TEXT,"
+                              "annotation TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+QString DROPEcssv = QString("DROP TABLE IF EXISTS CS_VERTICAL;");
+QString CRTNEcssv = QString("CREATE TABLE IF NOT EXISTS CS_VERTICAL("
+                              "_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                              "stcd TEXT,"
+                              "year INTERGER,"
+                              "survey_id INTERGER,"
+                              "record_id INTERGER,"
+                              "vertical_id TEXT,"
+                              "distance TEXT,"
+                              "elevation TEXT,"
+                              "annotation TEXT,"
+                              "timestamp DATETIME"
+                              ");");
+
+
+#endif // SQLS_H
