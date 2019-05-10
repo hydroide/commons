@@ -11,16 +11,8 @@ QDateTime DateTimeHelper::fromShortFormat(const QString &qstr, int year)
     // and "123124.00" represents the start of next year
 
     QDateTime qdt;
-    string str = qstr.toStdString();
+    string str = formalizeShortFormat(qstr).toStdString();
     QStringList qstrList = qstr.split(".");
-
-    if (qstrList.size() > 0)
-    {
-        if (qstrList[0].size() == 5)
-        {
-            str = QString("0" + qstr).toStdString();
-        }
-    }
 
     string strMM = str.substr(0,2);
     int intMM{0};
@@ -52,12 +44,27 @@ QDateTime DateTimeHelper::fromShortFormat(const QString &qstr, int year)
     return qdt;
 }
 
+QString DateTimeHelper::formalizeShortFormat(const QString &qstr)
+{
+    QString ret = qstr;
+    auto qstrList = qstr.split(".");
+
+    if (qstrList.size() > 0)
+    {
+        if (qstrList[0].size() == 5)
+        {
+            ret = QString("0" + qstr);
+        }
+    }
+    return ret;
+}
+
 QString DateTimeHelper::toShortFormat(const QDateTime &qdt)
 {
     return qdt.toString("MMddhh.mm");
 }
 
-QTime DateTimeHelper::fromMMSS(const QString &qstr)
+QTime DateTimeHelper::fromHHmm(const QString &qstr)
 {
     if (qstr.length() == 3)
     {
@@ -70,7 +77,7 @@ QTime DateTimeHelper::fromMMSS(const QString &qstr)
     return QTime(); // 默认返回0点
 }
 
-QTime DateTimeHelper::fromMdotSS(const QString &qstr)
+QTime DateTimeHelper::fromHdot_m(const QString &qstr)
 {
     auto list = qstr.split(".");
     if (list.count() > 1)

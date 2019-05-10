@@ -25,6 +25,8 @@ public:
      */
     static QDateTime fromShortFormat(const QString &qstr, int year);
 
+    static QString formalizeShortFormat(const QString &qstr);
+
     /**
      * @brief toShortFormat 从QDateTime转为短格式时间
      * @param qdt 完整时间
@@ -33,17 +35,17 @@ public:
     static QString toShortFormat(const QDateTime& qdt);
 
     /**
-     * @brief fromMMSS 从MMSS转为 QTime 时间
+     * @brief fromHHmm 从MMSS转为 QTime 时间
      * @return 时间
      */
-    static QTime fromMMSS(const QString &);
+    static QTime fromHHmm(const QString &);
 
     /**
-     * @brief fromMdotSS 从MM.SS转为 QTime 时间
+     * @brief fromHdot_m 从MM.SS转为 QTime 时间
      * @param qstr
      * @return 时间
      */
-    static QTime fromMdotSS(const QString &qstr);
+    static QTime fromHdot_m(const QString &qstr);
 
     /**
      * @brief fromMMDD 从MMDD转为 QDate 完整日期
