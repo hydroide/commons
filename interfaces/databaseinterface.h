@@ -8,6 +8,7 @@ class DatabaseInterface
 public:
     virtual ~DatabaseInterface() {}
     virtual void setDatabase(QSqlDatabase db) = 0;
+    virtual bool initDatabase() { return false; }
 };
 
 #define DatabaseInterface_iid "org.hwsdsw.HydroCurve.DatabaseInterface"
