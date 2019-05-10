@@ -1,8 +1,8 @@
 ﻿#if _MSC_VER >= 1600
 #pragma execution_character_set("utf-8")
 #endif
-#ifndef GLOBALDEFINES
-#define GLOBALDEFINES
+#ifndef HCGLOBALDEFS_H
+#define HCGLOBALDEFS_H
 
 #include <QtCore>
 #include <QColor>
@@ -158,4 +158,4 @@ struct DGSDRPeriodOfCurve
     int curve_id;
 };
 
-#endif // GLOBALDEFINES
+#endif // HCGLOBALDEFS_H
