@@ -27,11 +27,9 @@ include(helpers/helpers.pri)
 include(modules/modules.pri)
 include(models/models.pri)
 
-SOURCES += \
-        commons.cpp
+SOURCES +=
 
 HEADERS += \
-        commons.h \
     hcglobaldefs.h
 
 unix {
